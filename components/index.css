@@ -1,0 +1,283 @@
+/* DO NOT CHANGE */
+@import "tailwindcss";
+@import "tw-animate-css";
+@custom-variant dark (&:is(.dark *));
+
+/* DO NOT CHANGE */
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+  /* Trust Us brand palette: coffee, rust, bronze, cream, ink. Flat fills only. */
+  --color-coffee: var(--coffee);
+  --color-rust: var(--rust);
+  --color-bronze: var(--bronze);
+  --color-sand: var(--sand);
+  --color-ink: var(--ink);
+}
+
+/* CHANGE VALUES FOR THEME */
+:root {
+  --radius: 0.625rem;
+  --coffee: #4a2c17;
+  --rust: #8b4513;
+  --bronze: #cd7f32;
+  --sand: #f5efe6;
+  --ink: #0d0d0d;
+  --background: #0D0D0D;
+  --foreground: #FFFFFF;
+  --card: #161616;
+  --card-foreground: #FFFFFF;
+  --popover: #161616;
+  --popover-foreground: #FFFFFF;
+  --primary: #8B4513;
+  --primary-foreground: #FFFFFF;
+  --secondary: #A0522D;
+  --secondary-foreground: #FFFFFF;
+  --muted: #2A2A2A;
+  --muted-foreground: #AAAAAA;
+  --accent: #CD7F32;
+  --accent-foreground: #FFFFFF;
+  --destructive: #CD5C5C;
+  --border: #333333;
+  --input: #333333;
+  --ring: #8B4513;
+  --chart-1: #CD7F32;
+  --chart-2: #8B4513;
+  --chart-3: #A0522D;
+  --chart-4: #6B3410;
+  --chart-5: #333333;
+  --sidebar: #161616;
+  --sidebar-foreground: #FFFFFF;
+  --sidebar-primary: #8B4513;
+  --sidebar-primary-foreground: #FFFFFF;
+  --sidebar-accent: #CD7F32;
+  --sidebar-accent-foreground: #FFFFFF;
+  --sidebar-border: #333333;
+  --sidebar-ring: #8B4513;
+}
+
+.dark {
+  --coffee: #4a2c17;
+  --rust: #8b4513;
+  --bronze: #cd7f32;
+  --sand: #f5efe6;
+  --ink: #0d0d0d;
+  --background: #0D0D0D;
+  --foreground: #FFFFFF;
+  --card: #161616;
+  --card-foreground: #FFFFFF;
+  --popover: #161616;
+  --popover-foreground: #FFFFFF;
+  --primary: #8B4513;
+  --primary-foreground: #FFFFFF;
+  --secondary: #A0522D;
+  --secondary-foreground: #FFFFFF;
+  --muted: #2A2A2A;
+  --muted-foreground: #AAAAAA;
+  --accent: #CD7F32;
+  --accent-foreground: #FFFFFF;
+  --destructive: #CD5C5C;
+  --border: #333333;
+  --input: #333333;
+  --ring: #8B4513;
+  --chart-1: #CD7F32;
+  --chart-2: #8B4513;
+  --chart-3: #A0522D;
+  --chart-4: #6B3410;
+  --chart-5: #333333;
+  --sidebar: #161616;
+  --sidebar-foreground: #FFFFFF;
+  --sidebar-primary: #8B4513;
+  --sidebar-primary-foreground: #FFFFFF;
+  --sidebar-accent: #CD7F32;
+  --sidebar-accent-foreground: #FFFFFF;
+  --sidebar-border: #333333;
+  --sidebar-ring: #8B4513;
+}
+
+/* Light mode. Kept OUTSIDE @layer base on purpose: the dark defaults live in
+   unlayered :root/.dark rules, and unlayered normal declarations win over
+   layered ones — inside the layer these overrides would never apply. */
+html[data-theme="light"] {
+  --coffee: #4a2c17;
+  --rust: #8b4513;
+  --bronze: #cd7f32;
+  --sand: #f7f2e9;
+  --ink: #0d0d0d;
+  --background: #fbf7f0;
+  --foreground: #0d0d0d;
+  --card: #f5f1e9;
+  --card-foreground: #0d0d0d;
+  --popover: #f5f1e9;
+  --popover-foreground: #0d0d0d;
+  --primary: #8b4513;
+  --primary-foreground: #fbf7f0;
+  --secondary: #a85a29;
+  --secondary-foreground: #fbf7f0;
+  --muted: #e7ddce;
+  --muted-foreground: #5a4a3a;
+  --accent: #cd7f32;
+  --accent-foreground: #0d0d0d;
+  --destructive: #8e3a2a;
+  --border: #d8cdb8;
+  --input: #d8cdb8;
+  --ring: #8b4513;
+  --chart-1: #cd7f32;
+  --chart-2: #8b4513;
+  --chart-3: #a85a29;
+  --chart-4: #4a2c17;
+  --chart-5: #d8cdb8;
+  --sidebar: #f5f1e9;
+  --sidebar-foreground: #0d0d0d;
+  --sidebar-primary: #8b4513;
+  --sidebar-primary-foreground: #fbf7f0;
+  --sidebar-accent: #cd7f32;
+  --sidebar-accent-foreground: #0d0d0d;
+  --sidebar-border: #d8cdb8;
+  --sidebar-ring: #8b4513;
+}
+
+/* Follow the OS colour scheme until the visitor picks a theme explicitly. */
+@media (prefers-color-scheme: light) {
+  html:not([data-theme]) {
+    --coffee: #4a2c17;
+    --rust: #8b4513;
+    --bronze: #cd7f32;
+    --sand: #f7f2e9;
+    --ink: #0d0d0d;
+    --background: #fbf7f0;
+    --foreground: #0d0d0d;
+    --card: #f5f1e9;
+    --card-foreground: #0d0d0d;
+    --popover: #f5f1e9;
+    --popover-foreground: #0d0d0d;
+    --primary: #8b4513;
+    --primary-foreground: #fbf7f0;
+    --secondary: #a85a29;
+    --secondary-foreground: #fbf7f0;
+    --muted: #e7ddce;
+    --muted-foreground: #5a4a3a;
+    --accent: #cd7f32;
+    --accent-foreground: #0d0d0d;
+    --destructive: #8e3a2a;
+    --border: #d8cdb8;
+    --input: #d8cdb8;
+    --ring: #8b4513;
+    --chart-1: #cd7f32;
+    --chart-2: #8b4513;
+    --chart-3: #a85a29;
+    --chart-4: #4a2c17;
+    --chart-5: #d8cdb8;
+    --sidebar: #f5f1e9;
+    --sidebar-foreground: #0d0d0d;
+    --sidebar-primary: #8b4513;
+    --sidebar-primary-foreground: #fbf7f0;
+    --sidebar-accent: #cd7f32;
+    --sidebar-accent-foreground: #0d0d0d;
+    --sidebar-border: #d8cdb8;
+    --sidebar-ring: #8b4513;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  button:not([disabled]),
+  [role="button"]:not([disabled]) {
+    cursor: pointer;
+  }
+  /* Trust Us: numbers get a tabular feel so balances do not jitter. */
+  .tabular {
+    font-variant-numeric: tabular-nums;
+  }
+
+  html[data-theme="light"] .theme-toggle-track::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    margin-left: 0.125rem;
+    transition: 0.2s ease;
+  }
+  html[data-theme="light"] .theme-toggle-thumb {
+    background-color: #cd7f32;
+    border-color: #0d0d0d;
+  }
+  html[data-theme="light"] .theme-switch-mode {
+    --switch-selected: 1;
+  }
+  html[data-theme="light"] .theme-icon-light {
+    display: flex;
+  }
+  html[data-theme="light"] .theme-icon-dark {
+    display: none;
+  }
+  html[data-theme="dark"] .theme-icon-light {
+    display: none;
+  }
+  html[data-theme="dark"] .theme-icon-dark {
+    display: flex;
+  }
+
+  /* Mobile status bar should be translucent when the user chooses a system theme. */
+  @media (prefers-color-scheme: light) {
+    html:not([data-theme]) .theme-toggle-track {
+      background-color: #d8cdb8;
+    }
+  }
+  @media (prefers-color-scheme: dark) {
+    html:not([data-theme]) .theme-toggle-track {
+      background-color: #2a2a2a;
+    }
+  }
+
+  /* The 3-way switcher tab highlight is drawn by a single border style. */
+  html[data-theme="light"] .theme-tab {
+    --theme-tab-bg: rgba(74 44 23 / 0.08);
+  }
+  html[data-theme="dark"] .theme-tab {
+    --theme-tab-bg: rgba(0 0 0 / 0.3);
+  }
+  html[data-theme="light"] .theme-tab span {
+    color: #0d0d0d;
+  }
+  html[data-theme="dark"] .theme-tab span {
+    color: #d8cdb8;
+  }
+}
