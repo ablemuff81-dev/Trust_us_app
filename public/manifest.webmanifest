@@ -1,0 +1,21 @@
+{
+  "name": "Trust Us — Wallet expenses in MGA",
+  "short_name": "Trust Us",
+  "description": "Track wallet expenses in Malagasy ariary: calendar, detailed statement, offline-first storage and six languages.",
+  "start_url": "/dashboard",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0d0d0d",
+  "theme_color": "#0d0d0d",
+  "lang": "en",
+  "categories": ["finance", "productivity"],
+  "icons": [
+    {
+      "src": "/logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

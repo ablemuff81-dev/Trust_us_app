@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-label="Trust Us">
+  <rect width="512" height="512" rx="96" fill="#F2F0EC"/>
+  <path
+    d="M262 428 C 208 352 204 228 276 118 C 342 230 328 356 262 428 Z"
+    fill="#FFFFFF"
+    stroke="#3F3730"
+    stroke-width="12"
+    stroke-linejoin="round"
+  />
+  <path
+    d="M258 424 C 168 372 120 268 152 138 C 248 194 296 320 258 424 Z"
+    fill="#3F3730"
+    stroke="#3F3730"
+    stroke-width="12"
+    stroke-linejoin="round"
+  />
+  <path
+    d="M266 428 C 308 372 348 286 382 176 C 436 278 404 382 266 428 Z"
+    fill="#FFFFFF"
+    stroke="#3F3730"
+    stroke-width="12"
+    stroke-linejoin="round"
+  />
+  <circle cx="378" cy="245" r="24" fill="#3F3730"/>
+  <text
+    x="118"
+    y="452"
+    font-family="Helvetica, Arial, sans-serif"
+    font-size="44"
+    font-weight="600"
+    fill="#3F3730"
+  >®</text>
+</svg>
