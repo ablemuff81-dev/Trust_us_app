@@ -292,17 +292,6 @@ function Auth({ redirectAfterAuth }: AuthProps = {}) {
             <div className="border-t border-border px-6 py-4 text-center text-[11px] text-muted-foreground">
               <p className="font-medium text-foreground">{t("footer.copyright")}</p>
               <p className="mt-1">{t("footer.madeIn")}</p>
-              <p className="mt-2">
-                {t("auth.securedBy")}{" "}
-                <a
-                  href="https://freebuff.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-bronze underline-offset-4 hover:underline"
-                >
-                  freebuff.com
-                </a>
-              </p>
             </div>
           </Card>
         </section>

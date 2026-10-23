@@ -1,12 +1,25 @@
-import { vlyPlugin } from "@vly-ai/integrations";
 import tailwindcss from "@tailwindcss/vite";
 import react from "@vitejs/plugin-react";
+import { VitePWA } from "vite-plugin-pwa";
 import path from "path";
 import { defineConfig } from "vite";
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [react(), vlyPlugin(), tailwindcss()],
+  plugins: [
+    react(),
+    tailwindcss(),
+    VitePWA({
+      registerType: "autoUpdate",
+      manifest: false,
+      includeAssets: ["logo.svg", "icon-192.png", "icon-512.png", "icon-maskable-512.png", "apple-touch-icon.png"],
+      workbox: {
+        navigateFallback: "/index.html",
+        maximumFileSizeToCacheInBytes: 5 * 1024 * 1024,
+        globPatterns: ["**/*.{js,css,html,svg,png,webmanifest}"],
+      },
+    }),
+  ],
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
@@ -85,10 +98,6 @@ export default defineConfig({
       'react-router',
       '@convex-dev/auth/react',
       'framer-motion',
-      // vlyPlugin() injects this import at serve time, so the dep scanner
-      // never sees it. Without it here the first page load discovers it,
-      // re-optimizes and full-reloads the preview mid-screenshot.
-      '@vly-ai/integrations',
     ],
   },
   // Performance hints
